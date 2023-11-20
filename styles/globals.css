@@ -2,31 +2,141 @@
 
 *,
 *::after,
-*::before{
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
 
-ul, li{
+ul,
+li {
     list-style: none;
 }
 
-a{
+a {
     height: inherit;
     text-decoration: none;
 }
 
-body{
+body {
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
+    background-color: var(--background-primary);
 }
 
-:root{
-    --background-primary: #FFFEEE;
+:root {
+    --background-primary: #dae9ff;
+    --background-secondary: #c2e6ef;
+    --background-black: #2a2a2a;
+    --background-yellow: #FFCD4B;
+    --text-color: #676767;
+    --outline: #aaaaaa;
+}
+
+/* ----------------------- Container ----------------------- */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ----------------------- Navbar ----------------------- */
+
+.navbar {
+    display: flex;
+    height: 8rem;
+    width: 100%;
+    background-color: var(--background-black);
+    padding: 0 5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15rem;
+}
+
+.circle {
+    width: 4rem;
+    height: 4rem;
+    background-color: bisque;
+    border-radius: 50%;
+    position: relative;
+}
+
+.circleText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.logoHr {
+    height: 3rem;
+    width: .2rem;
+    border-width: 0;
+    color: var(--background-yellow);
+    background-color: var(--background-yellow);
+}
+
+.logoName {
+    color: var(--background-primary);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .3rem;
+}
+
+.logBTN {
+    padding: 1rem 3rem;
+    background-color: var(--background-yellow);
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    overflow: hidden;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-radius: 1rem;
+}
+
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.login h1 {
+    margin-bottom: 3rem;
+}
+
+.login p {
+    margin-bottom: 1rem;
+}
+
+.ending{
+    text-align: center;
+    margin: 3rem 0;
+}
+
+/* ----------------------- Media Queries ----------------------- */
+
+@media (width <= 750px) {
+    html{
+        font-size: 50%;
+    }
+}
+
+@media (width <= 600px) {
+    
 }
